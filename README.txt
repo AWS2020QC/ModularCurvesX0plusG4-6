@@ -1,11 +1,11 @@
-This is Magma code to compute rational points on X_0^+(p) of genus 4-6.
+This is Magma code to compute rational points on X_0^+(p) of genus 4-6 (where p is prime).
 
 To understand this code, one needs to go through Section 3 of our paper
 https://arxiv.org/abs/2105.04811
 
 This code relies on Quadratic Chabauty package
 https://github.com/steffenmueller/QCMod
-developed by J. Balakrishnan, A. Best, F. Bianchi, N. Dogra, B. Lawrence, J. S. Müller, N. Triantafillou, J. Tuitman, and J. Vonk.
+developed by J. Balakrishnan, A. Best, F. Bianchi, N. Dogra, B. Lawrence, J. S. MÃ¼ller, N. Triantafillou, J. Tuitman, and J. Vonk.
 
 The intended way to use it is to download QCMod package and paste our files into the same main folder, so that calls such as
 load "qc_modular.m"
