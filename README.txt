@@ -39,7 +39,7 @@ X0p137_good_primes;
 
 
 // For more information about quadratic Chabauty computations, you can raise the printlevel in the next command.
-good_pts, bool, bad_pts, data, fake_pts, bad_disks := QCModAffine(Q, 5 : printlevel:=1);
+good_pts, bool, bad_pts, data, fake_pts, bad_disks := QCModAffine(Q, 5 : N:=20, printlevel:=1);
 // The curve has only the known rational points outside the bad residue disks and
 // disks at infinity
 
@@ -75,3 +75,11 @@ additional_preimage(Z, Y, 42*Z, W + X + 2*Y + Z, X0_plus_137_galbraith, x, y, ra
 
 //output is {@ @}
 //there are no additional pre-images (additional rational points with the same image as the known rational points on our plane affine patch)
+
+
+
+
+
+
+---------- COMMENT ON NEW QCMOD VERSION -----------
+18-Jan-22: Recently, QCMod package was updated. One needs to pass additional precision argument for our examples to work, as it is done in this readme.file. Usually N:=20 suffices, but for some genus 6 curves (level 197 and 359), one needs to set precision to N:=30.
