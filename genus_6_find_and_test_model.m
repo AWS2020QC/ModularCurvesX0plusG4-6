@@ -252,7 +252,7 @@ y^5 + (-85*x^5 + 1127*x^4 - 1913*x^3 - 1182*x^2 - 163*x - 6)*y^4 + (10080*x^10 -
     10352281169140*x^12 - 5911510862587*x^11 - 1394541574295*x^10 +
     91020107428*x^9 + 165638010722*x^8 + 56008509377*x^7 + 10935753977*x^6 +
     1399983446*x^5 + 119863400*x^4 + 6648960*x^3 + 216912*x^2 + 3168*x;
-good_pts_271_1_of_1, bool_271_1_of_1, bad_pts_271_1_of_1, data_271_1_of_1, fake_rat_pts_271_1_of_1, bad_disks_271_1_of_1 := QCModAffine(Patch_271_1_of_1_eq, p : printlevel:=3);
+good_pts_271_1_of_1, bool_271_1_of_1, bad_pts_271_1_of_1, data_271_1_of_1, fake_rat_pts_271_1_of_1, bad_disks_271_1_of_1 := QCModAffine(Patch_271_1_of_1_eq, p : N:=20, prec:=25);
 printf "good_pts_271_1_of_1: %o\n", good_pts_271_1_of_1;
 printf "bool_271_1_of_1: %o\n", bool_271_1_of_1;
 printf "bad_pts_271_1_of_1: %o\n", bad_pts_271_1_of_1;
