@@ -80,6 +80,7 @@ additional_preimage(Z, Y, 42*Z, W + X + 2*Y + Z, X0_plus_137_galbraith, x, y, ra
 
 
 
-
----------- COMMENT ON NEW QCMOD VERSION -----------
-18-Jan-22: Recently, QCMod package was updated. One needs to pass additional precision argument for our examples to work, as it is done in this readme.file. Usually N:=20 suffices, but for some curves (levels 173, 197, 269 and 359), one can set precision to N:=30.
+########################################################
+#---------- COMMENT ON NEW QCMOD VERSION -----------
+#18-Jan-22: Recently, QCMod package was updated. One needs to pass additional precision argument for our examples to work, as it is done in this readme.file. Usually N:=20 #suffices, but for some curves (levels 173, 197, 269 and 359), one can set precision to N:=30.
+########################################################
