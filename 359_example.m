@@ -20,7 +20,7 @@ infinite_point_primes_data_1;
 bad_point_primes_data_1;
 // there are no bad points for p := 7
 
-good_pts_1, bool_1, bad_pts_1, data_1, fake_pts_1, bad_disks_1 := QCModAffine(image_curve_eq_1, 7 : printlevel:=2);
+good_pts_1, bool_1, bad_pts_1, data_1, fake_pts_1, bad_disks_1 := QCModAffine(image_curve_eq_1, 7 : printlevel:=2, N:=30);
 // The curve has only the known rational points outside the bad residue disks and
 // disks at infinity
 
@@ -58,7 +58,7 @@ infinite_point_primes_data_2;
 bad_point_primes_data_2;
 // again, there are no bad points for p := 7 (the smallest prime for which there exist bad points is p := 17)
 
- good_pts_2, bool_2, bad_pts_2, data_2, fake_pts_2, bad_disks_2 := QCModAffine(image_curve_eq_2, 7 : printlevel:=2);
+ good_pts_2, bool_2, bad_pts_2, data_2, fake_pts_2, bad_disks_2 := QCModAffine(image_curve_eq_2, 7 : printlevel:=2, N:=30);
 // The curve has only the known rational points outside the bad residue disks and
 // disks at infinity
 
