@@ -20,7 +20,7 @@ X0_p_137, patch_137, map_137, ratpts_137, good_primes_137, infinite_points_137, 
 
 load "qc_modular.m";
 p := 5;
-good_pts_137_1_of_1, bool_137_1_of_1, bad_pts_137_1_of_1, data_137_1_of_1, fake_rat_pts_137_1_of_1, bad_disks_137_1_of_1 := QCModAffine(patch_137, p : printlevel:=2);
+good_pts_137_1_of_1, bool_137_1_of_1, bad_pts_137_1_of_1, data_137_1_of_1, fake_rat_pts_137_1_of_1, bad_disks_137_1_of_1 := QCModAffine(patch_137, p : N:=20, printlevel:=2);
 printf "good_pts_137_1_of_1: %o\n", good_pts_137_1_of_1;
 printf "bool_137_1_of_1: %o\n", bool_137_1_of_1;
 printf "bad_pts_137_1_of_1: %o\n", bad_pts_137_1_of_1;
@@ -66,7 +66,7 @@ Patch_173_1_of_1_eq :=
     302880799/110592*x^8 - 1445252699/82944*x^7 + 695411285/41472*x^6 -
     29956235/6912*x^5 + 1455024709/165888*x^4 - 168700357/27648*x^3 + 399595/512*x^2 -
     224665/6144*x + 2401/4096;
-good_pts_173_1_of_1, bool_173_1_of_1, bad_pts_173_1_of_1, data_173_1_of_1, fake_rat_pts_173_1_of_1, bad_disks_173_1_of_1 := QCModAffine(Patch_173_1_of_1_eq, p : printlevel:=3);
+good_pts_173_1_of_1, bool_173_1_of_1, bad_pts_173_1_of_1, data_173_1_of_1, fake_rat_pts_173_1_of_1, bad_disks_173_1_of_1 := QCModAffine(Patch_173_1_of_1_eq, p : N:=30, printlevel:=3);
 printf "good_pts_173_1_of_1: %o\n", good_pts_173_1_of_1;
 printf "bool_173_1_of_1: %o\n", bool_173_1_of_1;
 printf "bad_pts_173_1_of_1: %o\n", bad_pts_173_1_of_1;
@@ -109,7 +109,7 @@ y^4 + (188*x^4 - 531*x^3 + 730*x^2 - 585*x + 195)*y^3 + (6930*x^8 - 36467*x^7 +
     501847128*x^11 + 975020037*x^10 - 1580007615*x^9 + 2144054322*x^8 -
     2430428083*x^7 + 2279776105*x^6 - 1737806496*x^5 + 1046077245*x^4 -
     476258451*x^3 + 153252000*x^2 - 30873150*x + 2910897;
-good_pts_199_1_of_1, bool_199_1_of_1, bad_pts_199_1_of_1, data_199_1_of_1, fake_rat_pts_199_1_of_1, bad_disks_199_1_of_1 := QCModAffine(Patch_199_1_of_1_eq, p : printlevel:=3);
+good_pts_199_1_of_1, bool_199_1_of_1, bad_pts_199_1_of_1, data_199_1_of_1, fake_rat_pts_199_1_of_1, bad_disks_199_1_of_1 := QCModAffine(Patch_199_1_of_1_eq, p : N:=20, printlevel:=3);
 printf "good_pts_199_1_of_1: %o\n", good_pts_199_1_of_1;
 printf "bool_199_1_of_1: %o\n", bool_199_1_of_1;
 printf "bad_pts_199_1_of_1: %o\n", bad_pts_199_1_of_1;
@@ -155,7 +155,7 @@ y^4 + (47/12*x^4 - 70/3*x^3 - 797/15*x^2 - 701/30*x - 11/2)*y^3 + (167/36*x^8 -
     45374981579/3240000*x^9 + 271327319/80000*x^8 - 4566839179/432000*x^7 -
     105387676043/12960000*x^6 + 1344611/19200*x^5 + 476339231/172800*x^4 +
     11053139/6912*x^3 + 388631/864*x^2 + 7225/108*x + 350/81;
-good_pts_251_1_of_1, bool_251_1_of_1, bad_pts_251_1_of_1, data_251_1_of_1, fake_rat_pts_251_1_of_1, bad_disks_251_1_of_1 := QCModAffine(Patch_251_1_of_1_eq, p : printlevel:=3);
+good_pts_251_1_of_1, bool_251_1_of_1, bad_pts_251_1_of_1, data_251_1_of_1, fake_rat_pts_251_1_of_1, bad_disks_251_1_of_1 := QCModAffine(Patch_251_1_of_1_eq, p : N:=20, printlevel:=3);
 printf "good_pts_251_1_of_1: %o\n", good_pts_251_1_of_1;
 printf "bool_251_1_of_1: %o\n", bool_251_1_of_1;
 printf "bad_pts_251_1_of_1: %o\n", bad_pts_251_1_of_1;
@@ -196,7 +196,7 @@ y^4 + (48*x^4 - 140*x^3 + 74*x^2 + 23*x - 1)*y^3 + (903*x^8 - 5223*x^7 +
     3760074*x^12 + 40986*x^11 - 3866940*x^10 + 2042064*x^9 + 1845207*x^8 -
     1526499*x^7 - 580176*x^6 + 553014*x^5 + 152064*x^4 - 109188*x^3 - 30240*x^2
     + 9288*x + 3024;
-good_pts_311_1_of_1, bool_311_1_of_1, bad_pts_311_1_of_1, data_311_1_of_1, fake_rat_pts_311_1_of_1, bad_disks_311_1_of_1 := QCModAffine(Patch_311_1_of_1_eq, p : printlevel:=3);
+good_pts_311_1_of_1, bool_311_1_of_1, bad_pts_311_1_of_1, data_311_1_of_1, fake_rat_pts_311_1_of_1, bad_disks_311_1_of_1 := QCModAffine(Patch_311_1_of_1_eq, p : N:=20, printlevel:=3);
 printf "good_pts_311_1_of_1: %o\n", good_pts_311_1_of_1;
 printf "bool_311_1_of_1: %o\n", bool_311_1_of_1;
 printf "bad_pts_311_1_of_1: %o\n", bad_pts_311_1_of_1;
