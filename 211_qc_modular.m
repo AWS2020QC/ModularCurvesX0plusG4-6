@@ -8,7 +8,7 @@ Q := y^6 + (9*x + 1)*y^5 + (32*x^2 + 12*x - 2)*y^4 + (57*x^3 + 49*x^2 - 6*x
 
 p := 31;
 
-good_pts_1, bool_1, bad_pts_1, data_1, fake_pts_1, bad_disks_1 := QCModAffine(Q, p : printlevel := 4);
+good_pts_1, bool_1, bad_pts_1, data_1, fake_pts_1, bad_disks_1 := QCModAffine(Q, p : N:=40, printlevel := 1);
 // The curve has only the known rational points outside the bad residue disks and
 // disks at infinity
 
@@ -37,7 +37,7 @@ Q := y^6 + (2 + 7*x)*y^5 + (-1 + 14*x + 18*x^2)*y^4 + (-4 - 9*x + 38*x^2 + 22*x^
 
 p := 31;
 
-good_pts_2, bool_2, bad_pts_2, data_2, fake_pts_2, bad_disks_2 := QCModAffine(Q, p : printlevel := 4);
+good_pts_2, bool_2, bad_pts_2, data_2, fake_pts_2, bad_disks_2 := QCModAffine(Q, p : N:=40, printlevel := 1);
 // The curve has only the known rational points outside the bad residue disks and
 // disks at infinity
 
