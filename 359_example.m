@@ -5,7 +5,7 @@ load "model_equation_finder.m";
 
 
 //1st model data
-image_curve_1, image_curve_eq_1, model_map_1, image_ratpts_1,good_primes_for_single_model_1, \
+image_curve_1, image_curve_eq_1, model_map_1, image_ratpts_1,good_primes_for_single_model_1,
 infinite_point_primes_data_1,bad_point_primes_data_1, defining_eq_bad_disks_1, image_curve_non_monic_leading_coefficient_1, image_curve_non_monic_eq_1
 := find_and_test_model(W+Y, X, U+V, X, X0_plus_359, x, y, ratpts_359);
 
@@ -44,7 +44,7 @@ bad_disks_1;
 
 
 //2nd model data
-image_curve_2, image_curve_eq_2, model_map_2, image_ratpts_2,good_primes_for_single_model_2, \
+image_curve_2, image_curve_eq_2, model_map_2, image_ratpts_2,good_primes_for_single_model_2,
 infinite_point_primes_data_2,bad_point_primes_data_2, defining_eq_bad_disks_2, image_curve_non_monic_leading_coefficient_2, image_curve_non_monic_eq_2
 := find_and_test_model(X, U+V, W+Y, U+V, X0_plus_359, x, y, ratpts_359);
 
