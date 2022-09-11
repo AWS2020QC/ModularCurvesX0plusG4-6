@@ -1,4 +1,4 @@
-This is Magma code to compute rational points on X_0^+(p) of genus 4-6 (where p is prime).
+This is Magma* code to compute rational points on X_0^+(p) of genus 4-6 (where p is prime).
 
 To understand this code, one needs to go through Section 3 of our paper
 https://arxiv.org/abs/2105.04811
@@ -76,6 +76,8 @@ additional_preimage(Z, Y, 42*Z, W + X + 2*Y + Z, X0_plus_137_galbraith, x, y, ra
 //output is {@ @}
 //there are no additional pre-images (additional rational points with the same image as the known rational points on our plane affine patch)
 
+
+* Wieb Bosma, John Cannon, and Catherine Playoust. The Magma algebra system. I. The user language. volume 24, pages 235–265. 1997. Computational algebra and number theory (London, 1993).
 
 
 
