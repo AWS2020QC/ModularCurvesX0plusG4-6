@@ -78,7 +78,7 @@ function find_and_test_model(x_num, x_denom, y_num, y_denom, domain_curve, x, y,
 
   image_curve_non_monic_degree := Degree(image_curve_non_monic_leading_coefficient);
   image_curve_non_monic_leading_term := Evaluate(image_curve_non_monic_leading_coefficient, A/C);
-  image_curve := Scheme(projective_plane, [Numerator( Evaluate(image_curve_non_monic_eq, [A, B/image_curve_non_monic_leading_term, C]))]);
+  image_curve := Scheme(projective_plane, [ExactQuotient(Numerator(Evaluate(image_curve_non_monic_eq, [A, B/image_curve_non_monic_leading_term, C])), C^Degree(image_curve_non_monic_eq, 2))]);
   map_leading_coefficients := Coefficients(image_curve_non_monic_leading_coefficient);
   
   // Write out equations explicitly
