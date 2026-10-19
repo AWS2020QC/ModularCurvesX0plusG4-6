@@ -104,7 +104,7 @@ function find_and_test_model(x_num, x_denom, y_num, y_denom, domain_curve, x, y,
   end if;
   
   model_map := map<domain_curve -> projective_plane | map_direct_components>;
-  image_ratpts := [model_map(domain_curve ! ratpt) : ratpt in known_rat_pts];
+  image_ratpts := [Curve(image_curve) ! Eltseq(model_map(domain_curve ! ratpt)) : ratpt in known_rat_pts];
   
   scheme_at_infinity_x := Scheme(domain_curve, [dp[2] : dp in AllDefiningPolynomials(map_x)]);
   scheme_at_infinity_y := Scheme(domain_curve, [dp[2] : dp in AllDefiningPolynomials(map_y)]);
