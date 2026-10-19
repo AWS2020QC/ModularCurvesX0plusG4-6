@@ -79,7 +79,7 @@ function find_and_test_model(x_num, x_denom, y_num, y_denom, domain_curve, x, y,
   image_curve_non_monic_degree := Degree(image_curve_non_monic_leading_coefficient);
   image_curve_non_monic_leading_term := Evaluate(image_curve_non_monic_leading_coefficient, A/C);
   image_curve_num := Numerator(Evaluate(image_curve_non_monic_eq, [A, B/image_curve_non_monic_leading_term, C]));
-  image_curve := Scheme(projective_plane, [ExactQuotient(image_curve_num, C^Min([Exponents(m)[3] : m in Monomials(image_curve_num)]))]);
+  image_curve := Curve(projective_plane, ExactQuotient(image_curve_num, C^Min([Exponents(m)[3] : m in Monomials(image_curve_num)])));
   map_leading_coefficients := Coefficients(image_curve_non_monic_leading_coefficient);
   
   // Write out equations explicitly
@@ -105,8 +105,7 @@ function find_and_test_model(x_num, x_denom, y_num, y_denom, domain_curve, x, y,
   end if;
   
   model_map := map<domain_curve -> projective_plane | map_direct_components>;
-  image_curve_as_curve := Curve(image_curve);
-  image_ratpts := [image_curve_as_curve ! model_map(domain_curve ! ratpt) : ratpt in known_rat_pts];
+  image_ratpts := [image_curve ! model_map(domain_curve ! ratpt) : ratpt in known_rat_pts];
 
   scheme_at_infinity_x := Scheme(domain_curve, [dp[2] : dp in AllDefiningPolynomials(map_x)]);
   scheme_at_infinity_y := Scheme(domain_curve, [dp[2] : dp in AllDefiningPolynomials(map_y)]);
