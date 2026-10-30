@@ -23,8 +23,9 @@ P1<H,I> := ProjectiveSpace(Rationals(), 1);
 //// The last two ouputs are lists, for each prime p these give
 //// 6th: F_p-points on the domain curve that map to infinity on the image curve
 //// 7th: F_p-points on the domain curve that map to bad points on the image curve
-//// All computations that depend on p (5th-7th output) are performed up to max_prime, which is 50 by default.
-//// This max_prime is also the only true optional parameter.
+//// All computations that depend on p (5th-7th output) are performed for the primes from min_prime up to max_prime,
+//// which are 2 and 50 by default.
+//// These min_prime and max_prime are also the only true optional parameters.
 //// printlevel can give you more information about the output (set to 3 to see complete information)
 //// N and bound were precision/bound arguments used in QC SHOULD WE REMOVE THESE??
 
@@ -37,7 +38,7 @@ function find_and_test_model_Q_only(x_num, x_denom, y_num, y_denom, domain_curve
   return image_curve_monic_eq, image_curve_non_monic_eq_xy;
 end function;
 
-function find_and_test_model(x_num, x_denom, y_num, y_denom, domain_curve, x, y, known_rat_pts : max_prime := 50, printlevel := 1, N := 20, bound := 30000)
+function find_and_test_model(x_num, x_denom, y_num, y_denom, domain_curve, x, y, known_rat_pts : min_prime := 2, max_prime := 50, printlevel := 1, N := 20, bound := 30000)
   projective_plane<A,B,C> := ProjectiveSpace(Rationals(), 2);
   map_x := Extend(map<domain_curve -> P1 | [x_num, x_denom]>);
   map_y := Extend(map<domain_curve -> P1 | [y_num, y_denom]>);
@@ -129,7 +130,7 @@ function find_and_test_model(x_num, x_denom, y_num, y_denom, domain_curve, x, y,
   infinite_point_data_format := recformat<p, infinite_points>;
   bad_point_data_format := recformat<p, bad_points>;
 
-  p := 2;
+  p := NextPrime(min_prime - 1);
   bad_point_primes_data := [];
   infinite_point_primes_data := [];
   good_primes_for_single_model := [];
